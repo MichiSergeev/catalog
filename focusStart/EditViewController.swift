@@ -16,7 +16,6 @@ class EditViewController: UIViewController {
     @IBOutlet weak var bodyText: UITextField!
     
     var index:Int?
-//    var arrayCars=[Car]()
     
 
     override func viewDidLoad() {

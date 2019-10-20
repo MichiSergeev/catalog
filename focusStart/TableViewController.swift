@@ -6,7 +6,10 @@
 //  Copyright © 2019 Mikhail Sergeev. All rights reserved.
 //
 
+
 import UIKit
+
+
 
 class TableViewController: UITableViewController {
 
@@ -45,7 +48,9 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        
         cell.textLabel?.text=arrayCars[indexPath.row].manufacturer
+        	
         cell.detailTextLabel?.text=[arrayCars[indexPath.row].model, arrayCars[indexPath.row].bodyType,arrayCars[indexPath.row].yearOfManufacture].joined(separator: " ")
         
         return cell
@@ -84,7 +89,7 @@ class TableViewController: UITableViewController {
         
         // delete Car
         let delete:UIContextualAction=UIContextualAction(style: .destructive, title: "Delete", handler: { action, view, completition in
-            removeCar(at: indexPath.row)
+            arrayCars.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             completition(true)
         })
@@ -112,12 +117,11 @@ class TableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
          
         if segue.identifier=="editshow"  {
             if let editVC=segue.destination as? EditViewController, let index=self.selectedRow {
                 editVC.index=index
+                
             }
         }
     }
@@ -133,7 +137,7 @@ class TableViewController: UITableViewController {
         if segue.identifier=="edit" {
             let editVC=segue.source as! EditViewController
             let newCar=Car(manufacturer: editVC.manufacturerText.text!, model: editVC.modelText.text!, yearOfManufacture: editVC.yearText.text!, bodyType: editVC.bodyText.text!)
-            arrayCars.insert(newCar, at: editVC.index!)
+            arrayCars[editVC.index!]=newCar
             self.tableView.reloadData()
         }
         
