@@ -8,30 +8,34 @@
 
 
 import UIKit
-
-
+import RealmSwift
 
 class TableViewController: UITableViewController {
-
     
+    // для запроса
+    var arrayCars:Results<CarsRealm>!
+    
+    // идентификатор ячейки
     let cellIdentifier="Cell"
+    
+    // выбранная строка для редактирования
+    // нужна для передачи в EditViewController
     var selectedRow:Int?
     
     
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
         tableView.reloadData()
+        
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        // загрузка объектов из базы данных
+        arrayCars=realm.objects(CarsRealm.self)
+        
     }
 
     // MARK: - Table view data source
@@ -42,16 +46,20 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayCars.count
+        
+        if arrayCars.count != 0 {
+           return arrayCars.count
+        }
+        return 0
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let car=arrayCars[indexPath.row]
         
-        cell.textLabel?.text=arrayCars[indexPath.row].manufacturer
-        	
-        cell.detailTextLabel?.text=[arrayCars[indexPath.row].model, arrayCars[indexPath.row].bodyType,arrayCars[indexPath.row].yearOfManufacture].joined(separator: " ")
+        cell.textLabel?.text=car.manufacturer
+        cell.detailTextLabel?.text=[car.model, car.body, car.year].joined(separator: " / ")
         
         return cell
     }
@@ -87,9 +95,14 @@ class TableViewController: UITableViewController {
         
         edit.backgroundColor = .gray
         
-        // delete Car
+//         delete Car
         let delete:UIContextualAction=UIContextualAction(style: .destructive, title: "Delete", handler: { action, view, completition in
-            arrayCars.remove(at: indexPath.row)
+            
+            let selectedCar=self.arrayCars[indexPath.row]
+            
+            try! realm.write {
+                realm.delete(selectedCar)
+            }
             tableView.deleteRows(at: [indexPath], with: .automatic)
             completition(true)
         })
@@ -119,28 +132,23 @@ class TableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          
         if segue.identifier=="editshow"  {
-            if let editVC=segue.destination as? EditViewController, let index=self.selectedRow {
-                editVC.index=index
+            
+            if let editVC=segue.destination as? EditViewController, let _=self.selectedRow {
+                
+                let car=arrayCars[selectedRow!]
+                editVC.editingCar=car
                 
             }
+            
         }
     }
 
-        
-        
+    
+    
     @IBAction func saveToMainViewController (segue:UIStoryboardSegue) {
-        
     }
     
     @IBAction func editToMainViewController (segue:UIStoryboardSegue) {
-        
-        if segue.identifier=="edit" {
-            let editVC=segue.source as! EditViewController
-            let newCar=Car(manufacturer: editVC.manufacturerText.text!, model: editVC.modelText.text!, yearOfManufacture: editVC.yearText.text!, bodyType: editVC.bodyText.text!)
-            arrayCars[editVC.index!]=newCar
-            self.tableView.reloadData()
-        }
-        
     }
     
 }

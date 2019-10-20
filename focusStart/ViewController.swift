@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    
     @IBOutlet weak var manufacturerText: UITextField!
     
     @IBOutlet weak var modelText: UITextField!
@@ -19,33 +21,49 @@ class ViewController: UIViewController {
     @IBOutlet weak var bodyText: UITextField!
     
     
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
+    
+    
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        
         if segue.identifier=="save" {
             
-            var newCar:Car
+            let newCar=CarsRealm()
             
             if manufacturerText.text!.isEmpty && modelText.text!.isEmpty && yearText.text!.isEmpty && bodyText.text!.isEmpty {
-                newCar=Car(manufacturer: "FirmaTest", model: "ModelTest", yearOfManufacture: "2000", bodyType: "CoupeTest")
-                arrayCars.append(newCar)
-            } else {
-                newCar=Car(manufacturer: manufacturerText.text!, model: modelText.text!, yearOfManufacture: yearText.text!, bodyType: bodyText.text!)
-                arrayCars.append(newCar)
-            }
+                
+                newCar.manufacturer="AnyManufacturer"
+                newCar.model="AnyModel"
+                newCar.year="0000"
+                newCar.body="Universal"
+                
+                try! realm.write {
+                    realm.add(newCar)
                 }
+                
+            } else {
+                newCar.manufacturer=manufacturerText.text!
+                newCar.model=modelText.text!
+                newCar.year=yearText.text!
+                newCar.body=bodyText.text!
+                
+                
+                try! realm.write {
+                    realm.add(newCar)
+                }
+                
             }
         }
+    }
+}
 
 

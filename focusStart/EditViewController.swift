@@ -15,27 +15,39 @@ class EditViewController: UIViewController {
     @IBOutlet weak var yearText: UITextField!
     @IBOutlet weak var bodyText: UITextField!
     
-    var index:Int?
     
-
+    var editingCar=CarsRealm()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        manufacturerText.text=arrayCars[index!].manufacturer
-        modelText.text=arrayCars[index!].model
-        yearText.text=arrayCars[index!].yearOfManufacture
-        bodyText.text=arrayCars[index!].bodyType
+        manufacturerText.text=editingCar.manufacturer
+        modelText.text=editingCar.model
+        yearText.text=editingCar.year
+        bodyText.text=editingCar.body
+        
     }
     
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier=="edit" {
+            
+            try! realm.write {
+                
+                editingCar.manufacturer=manufacturerText.text!
+                editingCar.model=modelText.text!
+                editingCar.year=yearText.text!
+                editingCar.body=bodyText.text!
+                
+            }
+            
+        }
+        
     }
-    */
-
 }

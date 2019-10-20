@@ -140,6 +140,7 @@
 				TargetAttributes = {
 					0550E7A52355139D0041A3D9 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -383,7 +384,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = michisergeev.focusStart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -403,7 +404,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = michisergeev.focusStart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
