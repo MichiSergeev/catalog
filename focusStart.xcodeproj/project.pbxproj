@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		0550E7C12355141A0041A3D9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550E7C02355141A0041A3D9 /* TableViewController.swift */; };
 		05667AAD235CD5D800C5DAEB /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05667AAC235CD5D800C5DAEB /* Car.swift */; };
 		05667AAF235CD5ED00C5DAEB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05667AAE235CD5ED00C5DAEB /* Model.swift */; };
-		057A0F4923D0D5DE0040A94D /* Pods_focusStart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5925F80D28D9FB1731CEF895 /* Pods_focusStart.framework */; };
 		05B931B12356309E002E3F29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B931B02356309E002E3F29 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,14 +31,9 @@
 		0550E7B82355139E0041A3D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0550E7BA2355139E0041A3D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0550E7C02355141A0041A3D9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		0550E7C22355147C0041A3D9 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = "../../../Focus/automotive-reference-book/ar_book/Model.swift"; sourceTree = "<group>"; };
-		0550E7C32355147C0041A3D9 /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Car.swift; path = "../../../Focus/automotive-reference-book/ar_book/Car.swift"; sourceTree = "<group>"; };
 		05667AAC235CD5D800C5DAEB /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Car.swift; path = focusStart/Car.swift; sourceTree = "<group>"; };
 		05667AAE235CD5ED00C5DAEB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = focusStart/Model.swift; sourceTree = "<group>"; };
 		05B931B02356309E002E3F29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5368CA79D160F789FFCC9E8D /* Pods-focusStart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-focusStart.release.xcconfig"; path = "Target Support Files/Pods-focusStart/Pods-focusStart.release.xcconfig"; sourceTree = "<group>"; };
-		5925F80D28D9FB1731CEF895 /* Pods_focusStart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_focusStart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E50E0AD35BC59FFCEB675875 /* Pods-focusStart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-focusStart.debug.xcconfig"; path = "Target Support Files/Pods-focusStart/Pods-focusStart.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +41,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				057A0F4923D0D5DE0040A94D /* Pods_focusStart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +54,6 @@
 				05667AAC235CD5D800C5DAEB /* Car.swift */,
 				0550E7A82355139D0041A3D9 /* focusStart */,
 				0550E7A72355139D0041A3D9 /* Products */,
-				D478E6C0E1E1688133961059 /* Pods */,
-				719EE6A1E6D9D9F65BCE3C17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,8 +70,6 @@
 			children = (
 				0550E7A92355139D0041A3D9 /* AppDelegate.swift */,
 				0550E7AB2355139D0041A3D9 /* SceneDelegate.swift */,
-				0550E7C32355147C0041A3D9 /* Car.swift */,
-				0550E7C22355147C0041A3D9 /* Model.swift */,
 				0550E7C02355141A0041A3D9 /* TableViewController.swift */,
 				0550E7AF2355139D0041A3D9 /* Main.storyboard */,
 				053B33B5235787EE00DF9930 /* EditViewController.swift */,
@@ -93,23 +82,6 @@
 			path = focusStart;
 			sourceTree = "<group>";
 		};
-		719EE6A1E6D9D9F65BCE3C17 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5925F80D28D9FB1731CEF895 /* Pods_focusStart.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D478E6C0E1E1688133961059 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E50E0AD35BC59FFCEB675875 /* Pods-focusStart.debug.xcconfig */,
-				5368CA79D160F789FFCC9E8D /* Pods-focusStart.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,11 +89,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0550E7BD2355139E0041A3D9 /* Build configuration list for PBXNativeTarget "focusStart" */;
 			buildPhases = (
-				D545072E60A6A1BCEFD96D18 /* [CP] Check Pods Manifest.lock */,
 				0550E7A22355139D0041A3D9 /* Sources */,
 				0550E7A32355139D0041A3D9 /* Frameworks */,
 				0550E7A42355139D0041A3D9 /* Resources */,
-				90FD4C761E2CE7E999CCE603 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,48 +148,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		90FD4C761E2CE7E999CCE603 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-focusStart/Pods-focusStart-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-focusStart/Pods-focusStart-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-focusStart/Pods-focusStart-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D545072E60A6A1BCEFD96D18 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-focusStart-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0550E7A22355139D0041A3D9 /* Sources */ = {
@@ -375,7 +303,6 @@
 		};
 		0550E7BE2355139E0041A3D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E50E0AD35BC59FFCEB675875 /* Pods-focusStart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -395,7 +322,6 @@
 		};
 		0550E7BF2355139E0041A3D9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5368CA79D160F789FFCC9E8D /* Pods-focusStart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
