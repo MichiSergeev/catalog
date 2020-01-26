@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Автомобильный справочник-->
+        <!--Catalog of Cars-->
         <scene sceneID="Y3Q-9N-ySf">
             <objects>
                 <tableViewController id="DtP-tN-j3d" customClass="TableViewController" customModule="focusStart" customModuleProvider="target" sceneMemberID="viewController">
@@ -47,7 +47,7 @@
                             <outlet property="delegate" destination="DtP-tN-j3d" id="FpN-QQ-e9J"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Автомобильный справочник" id="gSA-X5-KBY">
+                    <navigationItem key="navigationItem" title="Catalog of Cars" id="gSA-X5-KBY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VdZ-vQ-hxn">
                             <connections>
                                 <action selector="pushAddButton:" destination="DtP-tN-j3d" id="BLm-8h-G5M"/>
@@ -164,7 +164,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="gRW-cs-ju0">
                             <connections>
                                 <action selector="pushSaveButton:" destination="wcT-6m-Tsg" id="Glb-h8-79R"/>
-                                <segue destination="c40-JC-C0C" kind="unwind" identifier="save" unwindAction="saveToMainViewControllerWithSegue:" id="3Xd-Lf-dEl"/>
+                                <segue destination="c40-JC-C0C" kind="unwind" identifier="back" unwindAction="goToMainViewControllerWithUnwindSegue:" id="ai1-WD-Sbl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -225,17 +225,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDe-AO-vdY">
-                                <rect key="frame" x="87.5" y="335" width="200" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ODL-8P-sz2"/>
-                                    <constraint firstAttribute="width" constant="200" id="mdF-y6-LDo"/>
-                                </constraints>
-                                <state key="normal" title="Сохранить изменения"/>
-                                <connections>
-                                    <segue destination="XQQ-YR-9ix" kind="unwind" identifier="edit" unwindAction="editToMainViewControllerWithSegue:" id="EFz-ra-uqj"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y85-np-72i">
                                 <rect key="frame" x="20" y="281" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -270,21 +259,25 @@
                             <constraint firstItem="FET-QE-mXv" firstAttribute="leading" secondItem="tSm-Rg-sPQ" secondAttribute="leading" id="ceY-ZU-Lzy"/>
                             <constraint firstItem="RI0-4o-FNY" firstAttribute="height" secondItem="tSm-Rg-sPQ" secondAttribute="height" id="dBr-ej-RxW"/>
                             <constraint firstItem="9IX-VR-ECX" firstAttribute="height" secondItem="tSm-Rg-sPQ" secondAttribute="height" id="gZp-3a-K6O"/>
-                            <constraint firstItem="zDe-AO-vdY" firstAttribute="centerX" secondItem="0dn-nx-0Yp" secondAttribute="centerX" id="izM-AH-U72"/>
                             <constraint firstItem="21t-Yb-xD5" firstAttribute="width" secondItem="P73-fW-EJ7" secondAttribute="width" id="mJR-sY-svf"/>
                             <constraint firstItem="J8y-zl-FGK" firstAttribute="trailing" secondItem="P73-fW-EJ7" secondAttribute="trailing" constant="20" id="nPL-F8-rAn"/>
                             <constraint firstItem="0hY-Ds-3nv" firstAttribute="height" secondItem="tSm-Rg-sPQ" secondAttribute="height" id="ohC-2n-p4X"/>
                             <constraint firstItem="0hY-Ds-3nv" firstAttribute="top" secondItem="FET-QE-mXv" secondAttribute="bottom" id="qPg-Ky-jLh"/>
                             <constraint firstItem="FET-QE-mXv" firstAttribute="top" secondItem="9IX-VR-ECX" secondAttribute="bottom" id="qoU-70-02R"/>
                             <constraint firstItem="RI0-4o-FNY" firstAttribute="top" secondItem="P73-fW-EJ7" secondAttribute="bottom" id="sOQ-VU-eFo"/>
-                            <constraint firstItem="zDe-AO-vdY" firstAttribute="top" secondItem="Y85-np-72i" secondAttribute="bottom" constant="20" id="tWf-Vs-fAj"/>
                             <constraint firstItem="tSm-Rg-sPQ" firstAttribute="top" secondItem="J8y-zl-FGK" secondAttribute="top" constant="15" id="w75-h6-R3T"/>
                             <constraint firstItem="Y85-np-72i" firstAttribute="height" secondItem="P73-fW-EJ7" secondAttribute="height" id="xJi-wk-7ih"/>
                             <constraint firstItem="9IX-VR-ECX" firstAttribute="width" secondItem="tSm-Rg-sPQ" secondAttribute="width" id="xki-vW-QPr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J8y-zl-FGK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="a21-Z3-hDg"/>
+                    <navigationItem key="navigationItem" id="a21-Z3-hDg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="EEM-Oh-POV">
+                            <connections>
+                                <segue destination="XQQ-YR-9ix" kind="unwind" identifier="back" unwindAction="goToMainViewControllerWithUnwindSegue:" id="3JR-K1-SzL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bodyText" destination="Y85-np-72i" id="IGF-hk-VkS"/>
                         <outlet property="manufacturerText" destination="P73-fW-EJ7" id="Azn-M1-DW2"/>

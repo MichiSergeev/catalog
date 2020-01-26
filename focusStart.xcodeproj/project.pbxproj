@@ -17,8 +17,8 @@
 		0550E7C12355141A0041A3D9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550E7C02355141A0041A3D9 /* TableViewController.swift */; };
 		05667AAD235CD5D800C5DAEB /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05667AAC235CD5D800C5DAEB /* Car.swift */; };
 		05667AAF235CD5ED00C5DAEB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05667AAE235CD5ED00C5DAEB /* Model.swift */; };
+		057A0F4923D0D5DE0040A94D /* Pods_focusStart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5925F80D28D9FB1731CEF895 /* Pods_focusStart.framework */; };
 		05B931B12356309E002E3F29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B931B02356309E002E3F29 /* ViewController.swift */; };
-		792BDF351C39F321ECBBB086 /* Pods_focusStart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5925F80D28D9FB1731CEF895 /* Pods_focusStart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				792BDF351C39F321ECBBB086 /* Pods_focusStart.framework in Frameworks */,
+				057A0F4923D0D5DE0040A94D /* Pods_focusStart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

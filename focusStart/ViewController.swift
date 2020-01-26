@@ -10,32 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
     @IBOutlet weak var manufacturerText: UITextField!
-    
     @IBOutlet weak var modelText: UITextField!
-    
     @IBOutlet weak var yearText: UITextField!
-    
     @IBOutlet weak var bodyText: UITextField!
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    
-    
-    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier=="save" {
+        if segue.identifier=="back"{
             
             let newCar=CarsRealm()
             

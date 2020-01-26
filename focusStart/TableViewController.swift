@@ -132,6 +132,7 @@ class TableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          
         if segue.identifier=="editshow"  {
+            print("сработал переход по prepare for segue")
             
             if let editVC=segue.destination as? EditViewController, let _=self.selectedRow {
                 
@@ -142,13 +143,9 @@ class TableViewController: UITableViewController {
             
         }
     }
-
     
-    
-    @IBAction func saveToMainViewController (segue:UIStoryboardSegue) {
-    }
-    
-    @IBAction func editToMainViewController (segue:UIStoryboardSegue) {
+    @IBAction func goToMainViewController (unwindSegue: UIStoryboardSegue) {
+        
     }
     
 }
