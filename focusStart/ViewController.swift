@@ -1,12 +1,5 @@
-//
-//  ViewController.swift
-//  focusStart
-//
-//  Created by Mikhail Sergeev on 15.10.2019.
-//  Copyright © 2019 Mikhail Sergeev. All rights reserved.
-//
-
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -27,29 +20,29 @@ class ViewController: UIViewController {
         
         if segue.identifier=="back"{
             
-            let newCar=CarsRealm()
+//            let newCar=CarsRealm()
             
             if manufacturerText.text!.isEmpty && modelText.text!.isEmpty && yearText.text!.isEmpty && bodyText.text!.isEmpty {
                 
-                newCar.manufacturer="AnyManufacturer"
-                newCar.model="AnyModel"
-                newCar.year="0000"
-                newCar.body="Universal"
+//                newCar.manufacturer="AnyManufacturer"
+//                newCar.model="AnyModel"
+//                newCar.year="0000"
+//                newCar.body="Universal"
                 
-                try! realm.write {
-                    realm.add(newCar)
-                }
+//                try! realm.write {
+//                    realm.add(newCar)
+//                }
                 
             } else {
-                newCar.manufacturer=manufacturerText.text!
-                newCar.model=modelText.text!
-                newCar.year=yearText.text!
-                newCar.body=bodyText.text!
+//                newCar.manufacturer=manufacturerText.text!
+//                newCar.model=modelText.text!
+//                newCar.year=yearText.text!
+//                newCar.body=bodyText.text!
                 
                 
-                try! realm.write {
-                    realm.add(newCar)
-                }
+//                try! realm.write {
+//                    realm.add(newCar)
+//                }
                 
             }
         }

@@ -1,12 +1,5 @@
-//
-//  EditViewController.swift
-//  focusStart
-//
-//  Created by Mikhail Sergeev on 16.10.2019.
-//  Copyright © 2019 Mikhail Sergeev. All rights reserved.
-//
-
 import UIKit
+import CoreData
 
 class EditViewController: UIViewController {
     
@@ -16,16 +9,16 @@ class EditViewController: UIViewController {
     @IBOutlet weak var bodyText: UITextField!
     
     
-    var editingCar=CarsRealm()
+//    var editingCar=CarsRealm()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        manufacturerText.text=editingCar.manufacturer
-        modelText.text=editingCar.model
-        yearText.text=editingCar.year
-        bodyText.text=editingCar.body
+//        manufacturerText.text=editingCar.manufacturer
+//        modelText.text=editingCar.model
+//        yearText.text=editingCar.year
+//        bodyText.text=editingCar.body
         
     }
     
@@ -38,14 +31,14 @@ class EditViewController: UIViewController {
         
         if segue.identifier=="back" {
             
-            try! realm.write {
-                
-                editingCar.manufacturer=manufacturerText.text!
-                editingCar.model=modelText.text!
-                editingCar.year=yearText.text!
-                editingCar.body=bodyText.text!
-                
-            }
+//            try! realm.write {
+//
+//                editingCar.manufacturer=manufacturerText.text!
+//                editingCar.model=modelText.text!
+//                editingCar.year=yearText.text!
+//                editingCar.body=bodyText.text!
+//
+//            }
             
         }
         

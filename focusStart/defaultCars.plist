@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cars</key>
+	<array>
+		<dict>
+			<key>manufacturer</key>
+			<string>Nissan</string>
+			<key>model</key>
+			<string>Tiida</string>
+			<key>body</key>
+			<string>Hatchback</string>
+			<key>year</key>
+			<string>2007</string>
+		</dict>
+		<dict>
+			<key>manufacturer</key>
+			<string>Suzuki</string>
+			<key>model</key>
+			<string>Grand Vitara</string>
+			<key>body</key>
+			<string>Universal</string>
+			<key>year</key>
+			<string>2001</string>
+		</dict>
+		<dict>
+			<key>manufacturer</key>
+			<string>Subaru</string>
+			<key>model</key>
+			<string>Impreza XV</string>
+			<key>body</key>
+			<string>Hatchback</string>
+			<key>year</key>
+			<string>2013</string>
+		</dict>
+	</array>
+</dict>
+</plist>

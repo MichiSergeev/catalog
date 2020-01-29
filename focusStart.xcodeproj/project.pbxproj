@@ -3,37 +3,40 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		053B33B6235787EE00DF9930 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053B33B5235787EE00DF9930 /* EditViewController.swift */; };
-		0550E7AA2355139D0041A3D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550E7A92355139D0041A3D9 /* AppDelegate.swift */; };
+		053F517823DE096C00C58AB3 /* defaultCars.plist in Resources */ = {isa = PBXBuildFile; fileRef = 053F517723DE096C00C58AB3 /* defaultCars.plist */; };
 		0550E7AC2355139D0041A3D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550E7AB2355139D0041A3D9 /* SceneDelegate.swift */; };
 		0550E7B12355139D0041A3D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0550E7AF2355139D0041A3D9 /* Main.storyboard */; };
-		0550E7B42355139D0041A3D9 /* focusStart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0550E7B22355139D0041A3D9 /* focusStart.xcdatamodeld */; };
 		0550E7B62355139E0041A3D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0550E7B52355139E0041A3D9 /* Assets.xcassets */; };
 		0550E7B92355139E0041A3D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0550E7B72355139E0041A3D9 /* LaunchScreen.storyboard */; };
 		0550E7C12355141A0041A3D9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550E7C02355141A0041A3D9 /* TableViewController.swift */; };
-		05667AAD235CD5D800C5DAEB /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05667AAC235CD5D800C5DAEB /* Car.swift */; };
-		05667AAF235CD5ED00C5DAEB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05667AAE235CD5ED00C5DAEB /* Model.swift */; };
+		05B61A0323E03A170001ABAF /* CarsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05B61A0123E03A170001ABAF /* CarsModel.xcdatamodeld */; };
+		05B61A0623E03A9F0001ABAF /* Cars+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B61A0423E03A9F0001ABAF /* Cars+CoreDataClass.swift */; };
+		05B61A0723E03A9F0001ABAF /* Cars+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B61A0523E03A9F0001ABAF /* Cars+CoreDataProperties.swift */; };
 		05B931B12356309E002E3F29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B931B02356309E002E3F29 /* ViewController.swift */; };
+		05F20E7E23DE1D66006DA912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0550E7A92355139D0041A3D9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		053B33B5235787EE00DF9930 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		053F517723DE096C00C58AB3 /* defaultCars.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = defaultCars.plist; path = focusStart/defaultCars.plist; sourceTree = "<group>"; };
 		0550E7A62355139D0041A3D9 /* focusStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = focusStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0550E7A92355139D0041A3D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0550E7AB2355139D0041A3D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0550E7B02355139D0041A3D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0550E7B32355139D0041A3D9 /* focusStart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = focusStart.xcdatamodel; sourceTree = "<group>"; };
 		0550E7B52355139E0041A3D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0550E7B82355139E0041A3D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0550E7BA2355139E0041A3D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0550E7C02355141A0041A3D9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		05667AAC235CD5D800C5DAEB /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Car.swift; path = focusStart/Car.swift; sourceTree = "<group>"; };
-		05667AAE235CD5ED00C5DAEB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = focusStart/Model.swift; sourceTree = "<group>"; };
+		05B61A0223E03A170001ABAF /* CarsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CarsModel.xcdatamodel; sourceTree = "<group>"; };
+		05B61A0423E03A9F0001ABAF /* Cars+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cars+CoreDataClass.swift"; sourceTree = "<group>"; };
+		05B61A0523E03A9F0001ABAF /* Cars+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cars+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		05B931B02356309E002E3F29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05F20E7623DE1505006DA912 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +53,12 @@
 		0550E79D2355139D0041A3D9 = {
 			isa = PBXGroup;
 			children = (
-				05667AAE235CD5ED00C5DAEB /* Model.swift */,
-				05667AAC235CD5D800C5DAEB /* Car.swift */,
+				05B61A0423E03A9F0001ABAF /* Cars+CoreDataClass.swift */,
+				05B61A0523E03A9F0001ABAF /* Cars+CoreDataProperties.swift */,
+				053F517723DE096C00C58AB3 /* defaultCars.plist */,
 				0550E7A82355139D0041A3D9 /* focusStart */,
 				0550E7A72355139D0041A3D9 /* Products */,
+				05F20E7523DE1505006DA912 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,13 +78,21 @@
 				0550E7C02355141A0041A3D9 /* TableViewController.swift */,
 				0550E7AF2355139D0041A3D9 /* Main.storyboard */,
 				053B33B5235787EE00DF9930 /* EditViewController.swift */,
+				05B61A0123E03A170001ABAF /* CarsModel.xcdatamodeld */,
 				05B931B02356309E002E3F29 /* ViewController.swift */,
 				0550E7B52355139E0041A3D9 /* Assets.xcassets */,
 				0550E7B72355139E0041A3D9 /* LaunchScreen.storyboard */,
 				0550E7BA2355139E0041A3D9 /* Info.plist */,
-				0550E7B22355139D0041A3D9 /* focusStart.xcdatamodeld */,
 			);
 			path = focusStart;
+			sourceTree = "<group>";
+		};
+		05F20E7523DE1505006DA912 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05F20E7623DE1505006DA912 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +132,7 @@
 				};
 			};
 			buildConfigurationList = 0550E7A12355139D0041A3D9 /* Build configuration list for PBXProject "focusStart" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -141,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053F517823DE096C00C58AB3 /* defaultCars.plist in Resources */,
 				0550E7B92355139E0041A3D9 /* LaunchScreen.storyboard in Resources */,
 				0550E7B62355139E0041A3D9 /* Assets.xcassets in Resources */,
 				0550E7B12355139D0041A3D9 /* Main.storyboard in Resources */,
@@ -154,13 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05667AAF235CD5ED00C5DAEB /* Model.swift in Sources */,
-				05667AAD235CD5D800C5DAEB /* Car.swift in Sources */,
+				05B61A0323E03A170001ABAF /* CarsModel.xcdatamodeld in Sources */,
+				05F20E7E23DE1D66006DA912 /* AppDelegate.swift in Sources */,
 				053B33B6235787EE00DF9930 /* EditViewController.swift in Sources */,
-				0550E7B42355139D0041A3D9 /* focusStart.xcdatamodeld in Sources */,
-				0550E7AA2355139D0041A3D9 /* AppDelegate.swift in Sources */,
 				0550E7C12355141A0041A3D9 /* TableViewController.swift in Sources */,
+				05B61A0723E03A9F0001ABAF /* Cars+CoreDataProperties.swift in Sources */,
 				05B931B12356309E002E3F29 /* ViewController.swift in Sources */,
+				05B61A0623E03A9F0001ABAF /* Cars+CoreDataClass.swift in Sources */,
 				0550E7AC2355139D0041A3D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,13 +377,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		0550E7B22355139D0041A3D9 /* focusStart.xcdatamodeld */ = {
+		05B61A0123E03A170001ABAF /* CarsModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				0550E7B32355139D0041A3D9 /* focusStart.xcdatamodel */,
+				05B61A0223E03A170001ABAF /* CarsModel.xcdatamodel */,
 			);
-			currentVersion = 0550E7B32355139D0041A3D9 /* focusStart.xcdatamodel */;
-			path = focusStart.xcdatamodeld;
+			currentVersion = 05B61A0223E03A170001ABAF /* CarsModel.xcdatamodel */;
+			path = CarsModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
