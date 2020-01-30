@@ -13,36 +13,42 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier=="back"{
             
-//            let newCar=CarsRealm()
+            let context=(UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let entity=NSEntityDescription.entity(forEntityName: "Cars", in: context)
+            let newCar=NSManagedObject(entity: entity!, insertInto: context) as! Cars
             
             if manufacturerText.text!.isEmpty && modelText.text!.isEmpty && yearText.text!.isEmpty && bodyText.text!.isEmpty {
                 
-//                newCar.manufacturer="AnyManufacturer"
-//                newCar.model="AnyModel"
-//                newCar.year="0000"
-//                newCar.body="Universal"
+                newCar.manufacturer="AnyManufacturer"
+                newCar.model="AnyModel"
+                newCar.year="0000"
+                newCar.body="Universal"
                 
-//                try! realm.write {
-//                    realm.add(newCar)
-//                }
+                do {
+                    try context.save()
+                    
+                } catch  {
+                    print(error.localizedDescription)
+                }
                 
             } else {
-//                newCar.manufacturer=manufacturerText.text!
-//                newCar.model=modelText.text!
-//                newCar.year=yearText.text!
-//                newCar.body=bodyText.text!
                 
+                newCar.manufacturer=manufacturerText.text!
+                newCar.model=modelText.text!
+                newCar.year=yearText.text!
+                newCar.body=bodyText.text!
                 
-//                try! realm.write {
-//                    realm.add(newCar)
-//                }
+                do {
+                    try context.save()
+                    
+                } catch  {
+                    print(error.localizedDescription)
+                }
                 
             }
         }
