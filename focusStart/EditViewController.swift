@@ -9,33 +9,25 @@ class EditViewController: UIViewController {
     @IBOutlet weak var bodyText: UITextField!
     
     
-    var editingCar=Cars()
+    var editingCar:Cars!
     var context=(UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        manufacturerText.text=editingCar.manufacturer
-        modelText.text=editingCar.model
-        yearText.text=editingCar.year
-        bodyText.text=editingCar.body
-
+            manufacturerText.text=editingCar.manufacturer
+            modelText.text=editingCar.model
+            yearText.text=editingCar.year
+            bodyText.text=editingCar.body
     }
     
-    
-
      // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier=="back" {
-            
-            editingCar.manufacturer=manufacturerText.text!
-            editingCar.model=modelText.text!
-            editingCar.year=yearText.text!
-            editingCar.body=bodyText.text!
-
+                editingCar.manufacturer=manufacturerText.text
+                editingCar.model=modelText.text
+                editingCar.year=yearText.text
+                editingCar.body=bodyText.text
             do {
                 try context.save()
             } catch {
