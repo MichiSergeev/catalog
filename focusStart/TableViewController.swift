@@ -111,7 +111,8 @@ class TableViewController: UITableViewController {
         if segue.identifier=="editshow"  {
             if let editVC=segue.destination as? EditViewController, let _=self.selectedRow {
                 let car=arrayCars[selectedRow!]
-//                editVC.editingCar=car
+                editVC.editingCar=car
+                
             }
             
         }
